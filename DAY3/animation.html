@@ -1,0 +1,40 @@
+<!doctype html>
+<style>
+
+.box {
+  width: 50px;
+  height: 50px;
+  background: red;
+animation: move 3s ease 0s infinite alternate;
+}
+
+@keyframes move {
+  from { transform: translateX(10px); }
+  to { transform: translateX(100px); }
+}
+
+.box1 {
+  width: 50px;
+  height: 50px;
+  background: red;
+animation: move2 3s ease 0s infinite alternate;
+}
+@keyframes move2 {
+  from { transform: translateY(10px); }
+  to { transform: translateY(100px); }
+}
+
+
+
+
+
+</style>
+
+<body>
+
+<div class="box"></div>
+
+<div class="box1"></div>
+
+</body>
+</html>

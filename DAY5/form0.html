@@ -1,0 +1,114 @@
+<!doctype html5>
+<body>
+<form section="check.html" method="get" onsubmit="return validate()">
+
+<lable> Enter the name:</label>
+<input type="text"  id="a1" name="pass" >  <span id="s1"></span>  </br></br>
+
+<lable> Enter the password:</label>      <input type="password" id="a2" name="pass">
+  <span id="s2"></span>   </br></br>
+
+<lable> Enter the confirm password:</label>    <input type="password" id="a22" name="pass">    <span id="s22"></span>
+</br></br>
+
+
+<lable>Select gender:</label>        <span id="s3"></span>
+	male<input type="radio" id="a3" name="pass">
+	female<input type="radio" id="a4" name="pass">
+<br></br>
+
+<lable>Select skills:</label>       <span id="s4"></span>
+<select id="a5" for="coursename">
+	<option value="select">----select----</option>
+	<option value="c">C language</option>
+	<option value="mern">mernstack</option>
+	<option value="jfs">java full stack</option>
+	<option value="py">python language</option>
+</select>
+
+<input type="submit" value="SUBMIT">
+
+</form>
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+function validate()
+{
+	let name = document.getElementById("a1").value;
+	let pass = document.getElementById("a2").value;
+	let cpass = document.getElementById("a22").value;
+	let gender1 = document.getElementById("a3");
+	let gender2 = document.getElementById("a4");
+	let skills = document.getElementById("a5").value;
+        let tname = true;
+	let tpass = true;
+	let tcpass = true;
+         if(name === "")
+  	{
+	       document.getElementById("s1").innerHTML="fill the field";
+	       document.getElementById("s1").style.color="red";
+	       tname = false;
+	}
+	else
+	{
+ 		document.getElementById("s1").innerHTML="valid";
+	       document.getElementById("s1").style.color="green";
+	}
+        //return tname;
+    	
+	if(pass === "")
+	{
+	     document.getElementById("s2").innerHTML="Enter the field";
+	     tpass=false;
+	}
+	else
+	{	
+           document.getElementById("s2").innerHTML="valid";
+	}
+	if(cpass === "")
+	{
+	     document.getElementById("s22").innerHTML="Enter the field";
+	     tcpass=false;
+	}
+	if(pass !== cpass)
+	{
+	    document.getElementById("s22").innerHTML="Enter the valid password";
+            tcpass = false;
+	}
+	if(!gender1 && !gender2)
+	{
+		 tcpass = false;
+	}
+	if(tname===true && tpass === true && tcpass === true)
+	{
+	     return true;
+	}
+	else
+	{ 
+ 	   return false;
+	}
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
